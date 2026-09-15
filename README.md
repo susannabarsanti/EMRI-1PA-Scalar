@@ -12,6 +12,12 @@ The 1PA gravitational self-force flux data used in the trajectory modules (`scri
 
 > B. Wardell, A. Pound, N. Warburton, J. Miller, L. Durkan, A. Le Tiec, "Gravitational waveforms for compact binaries from second-order self-force theory," Phys. Rev. Lett. 130, 241402 (2023), [arXiv:2112.12265](https://arxiv.org/abs/2112.12265)
 
+The analytic PN formulas used above `p=30` (where no numerical 1PA data is available) are taken from:
+
+> L. Honet, J. Mathews, G. Compère, A. Pound, B. Wardell, G. A. Piovano, M. van de Meent, and N. Warburton, (2025), [arXiv:2510.16112](https://arxiv.org/abs/2510.16112)
+
+> L. Honet, A. Pound, and G. Compère, Phys. Rev. D 113, 064035 (2026), [arXiv:2510.16114](https://arxiv.org/abs/2510.16114) 
+
 Parts of the analysis notebook are adapted from code originally written by Ollie Burke, see his [EMRI_PE](https://github.com/OllieBurke/EMRI_PE) repository.
 
 ## Repository structure
