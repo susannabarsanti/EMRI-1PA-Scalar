@@ -17,3 +17,9 @@ Used only by `HybridSFPN_1PAScalar_DenominatorExpanded` / `HybridSFPN_0PAScalar_
 - **`Numerical_F1_F2_EFLx.dat`** (6000 rows, 4 cols: `p`, [unused column], 1PA gravitational flux, `dE1/dr_hat`). Valid `p`: [6.25, 30] only — no numerical 1PA data exists beyond `p=30`, so for `p>30` the 1PA piece switches to an analytic PN formula (`F2PN`/`E1PN_prime` in the code) instead.
 - **`Numerical_Grav0pa_to50.dat`** (4375 rows, 2 cols: `p`, 0PA gravitational flux). Valid `p`: [6.25, 50] — used for the 0PA piece across the whole Hybrid range (both `p<=30` and `p>30`).
 - **`pdotCircScal_y_ext.dat`** (532 rows, 2 cols: `u`, scalar-charge flux). Covers `p` ≈ [6.05, 60.3] — the extended-domain counterpart of `pdotCircScal_y.dat`, needed since the Hybrid class evaluates the scalar flux across its whole range up to `p=50`.
+
+The analytic PN formulas (`F2PN`, `E1PN_prime`) used above `p=30` (where no numerical 1PA data is available) are taken from:
+
+> L. Honet, J. Mathews, G. Compère, A. Pound, B. Wardell, G. A. Piovano, M. van de Meent, and N. Warburton, (2025), [arXiv:2510.16112](https://arxiv.org/abs/2510.16112) [gr-qc]
+
+> L. Honet, A. Pound, and G. Compère, Phys. Rev. D 113, 064035 (2026), [arXiv:2510.16114](https://arxiv.org/abs/2510.16114) [gr-qc]
