@@ -1,10 +1,10 @@
 # EMRI-1PA-Scalar
 
-MCMC parameter-estimation pipeline and results for EMRI waveforms with a scalar-charge (scalar-tensor) modification, computed at first post-adiabatic (1PA) order and compared against 0PA / post-Newtonian / GR baselines.
+MCMC parameter-estimation pipeline and results for EMRI waveforms with scalar fields, incorporating first post-adiabatic (1PA) gravitational corrections and compared against 0PA / post-Newtonian / GR baselines.
 
 If you use this repository, please cite:
 
-> S. Barsanti, "Distinguishing scalar charges in extreme mass ratio inspirals: the impact of post-adiabatic dynamics" [arXiv:2607.09310](https://arxiv.org/abs/2607.09310)
+> S. Barsanti et al., "The significance of first post-adiabatic contributions for scalar charge measurements with intermediate and extreme mass ratio inspirals" [arXiv:2607.09310](https://arxiv.org/abs/2607.09310)
 
 The 1PA gravitational self-force flux data used in the trajectory modules (`scripts/shared_modules/data_few/Numerical_Grav0pa_to50.dat`) is taken from:
 
@@ -12,7 +12,7 @@ The 1PA gravitational self-force flux data used in the trajectory modules (`scri
 
 > B. Wardell, A. Pound, N. Warburton, J. Miller, L. Durkan, A. Le Tiec, "Gravitational waveforms for compact binaries from second-order self-force theory," Phys. Rev. Lett. 130, 241402 (2023), [arXiv:2112.12265](https://arxiv.org/abs/2112.12265)
 
-Parts of the analysis notebook are adapted from code originally written by [Ollie Burke](https://orcid.org/0000-0003-2393-209X), see his [EMRI_PE](https://github.com/OllieBurke/EMRI_PE) repository.
+Parts of the analysis notebook are adapted from code originally written by Ollie Burke, see his [EMRI_PE](https://github.com/OllieBurke/EMRI_PE) repository.
 
 ## Repository structure
 
