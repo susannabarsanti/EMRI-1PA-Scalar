@@ -6,7 +6,7 @@ If you use this repository, please cite:
 
 > S. Barsanti et al., "The significance of first post-adiabatic contributions for scalar charge measurements with intermediate and extreme mass ratio inspirals" [arXiv:2607.09310](https://arxiv.org/abs/2607.09310)
 
-The 1PA gravitational self-force flux data used in the trajectory modules (`scripts/shared_modules/data_few/Numerical_Grav0pa_to50.dat`) is taken from:
+The 1PA gravitational self-force flux data used in the trajectory modules (`scripts/shared_modules/data_few/QuasiCircularData_new.dat`) is taken from:
 
 > N. Warburton, A. Pound, B. Wardell, J. Miller, L. Durkan, "Gravitational-wave energy flux for compact binaries through second order in the mass ratio," Phys. Rev. Lett. 127, 151102 (2021), [arXiv:2107.01298](https://arxiv.org/abs/2107.01298)
 
