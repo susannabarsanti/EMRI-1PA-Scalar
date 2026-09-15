@@ -20,6 +20,6 @@ Used only by `HybridSFPN_1PAScalar_DenominatorExpanded` / `HybridSFPN_0PAScalar_
 
 The analytic PN formulas (`F2PN`, `E1PN_prime`) used above `p=30` (where no numerical 1PA data is available) are taken from:
 
-> L. Honet, J. Mathews, G. Compère, A. Pound, B. Wardell, G. A. Piovano, M. van de Meent, and N. Warburton, (2025), [arXiv:2510.16112](https://arxiv.org/abs/2510.16112) [gr-qc]
+> L. Honet, J. Mathews, G. Compère, A. Pound, B. Wardell, G. A. Piovano, M. van de Meent, and N. Warburton, (2025), [arXiv:2510.16112](https://arxiv.org/abs/2510.16112)
 
-> L. Honet, A. Pound, and G. Compère, Phys. Rev. D 113, 064035 (2026), [arXiv:2510.16114](https://arxiv.org/abs/2510.16114) [gr-qc]
+> L. Honet, A. Pound, and G. Compère, Phys. Rev. D 113, 064035 (2026), [arXiv:2510.16114](https://arxiv.org/abs/2510.16114) 
