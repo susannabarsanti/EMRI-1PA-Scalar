@@ -4,7 +4,7 @@ MCMC parameter-estimation pipeline and results for EMRI waveforms with scalar fi
 
 If you use this repository, please cite:
 
-> S. Barsanti et al., "The significance of first post-adiabatic contributions for scalar charge measurements with intermediate and extreme mass ratio inspirals" [arXiv:2607.09310](https://arxiv.org/abs/2607.09310)
+> S. Barsanti, O. Burke, A. Maselli, T. Sotiriou, A. Spiers, N. Warburton, "The significance of first post-adiabatic contributions for scalar charge measurements with intermediate and extreme mass ratio inspirals" [arXiv:2607.09310](https://arxiv.org/abs/2607.09310)
 
 The 1PA gravitational self-force flux data used in the trajectory modules (`scripts/shared_modules/data_few/QuasiCircularData_new.dat`) is taken from:
 
