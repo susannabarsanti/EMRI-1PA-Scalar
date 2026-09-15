@@ -10,7 +10,7 @@ Used by every scenario **except** Case1d (`SchwarzCirc1PASpinScalar`, `SchwarzCi
 - **`QuasiCircularDataSpin_restructured.dat`** (2375 rows, 2 cols: `p`, spin-correction flux term). Shares the same `p`-grid as `QuasiCircularData_new.dat` (row-for-row); used only by the two spin-scalar classes (`SchwarzCirc1PASpinScalar`, `SchwarzCirc0PASpinScalar`).
 - **`pdotCircScal_y.dat`** (500 rows, 2 cols: `u = 1/sqrt(p - 0.9*6)`, scalar-charge flux). Covers `p` ≈ [6.05, 30.05].
 
-## Extended-range files (valid up to `p` = 50-60), used only by the Hybrid Strong-Field-PN classes
+## Extended-range files (valid up to `p` = 50), used only by the Hybrid Strong-Field-PN classes
 
 Used only by `HybridSFPN_1PAScalar_DenominatorExpanded` / `HybridSFPN_0PAScalar_DenominatorExpanded` (scenario **1d**, `mu=40`), which integrate out to `p = 50` — beyond the range of the standard files above:
 
