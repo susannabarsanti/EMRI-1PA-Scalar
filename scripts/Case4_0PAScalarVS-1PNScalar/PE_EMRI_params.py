@@ -13,9 +13,10 @@ except ImportError:
 
 # Reconstructed for reproducibility: exact parameters used for this specific
 # paper result, read back from the true_values embedded in the corresponding
-# trimmed .h5 file in GOOD_RESULTS/data/. PE_EMRI_params.py is normally edited
-# in place before each run, so historical per-run values are otherwise lost -
-# see GOOD_RESULTS/scripts/README.md.
+# trimmed .h5 file in ../../data/ (or ../../../data/ for Case1/AppendixC
+# scenario subfolders). This file is normally edited in place before each run,
+# so it only ever reflects the parameters used to produce the .h5 file shipped
+# alongside this script.
 
 M = 1e5; mu = 10; a = 0.0; p0 = 24.381250923886657; e0 = 0.0; x_I0 = 1.0
 SNR_choice = 50;

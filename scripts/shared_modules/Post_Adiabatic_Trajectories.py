@@ -11,8 +11,6 @@ from few.utils.geodesic import get_fundamental_frequencies, ELQ_to_pex
 from typing import Union
 from multispline.spline import CubicSpline
 
-print("backend=",few.get_backend("cuda12x"))
-
 
 # define trajectory RHS class
 class SchwarzCirc1PASpinScalar(ODEBase):

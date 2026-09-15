@@ -1,23 +1,22 @@
 #!/bin/bash -l
-#SBATCH --job-name=hello
-# speficity number of nodes 
+#SBATCH --job-name=emri-1pa-cpu
 #SBATCH -N 1
-
-# specify number of tasks/cores per node required
 #SBATCH --ntasks-per-node 3
-
-# specify the walltime e.g 20 mins
 #SBATCH -t 00:20:00
-
-# set to email at start,end and failed jobs
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=myemailaddress@ucd.ie
 
-# run from current directory
-cd $SLURM_SUBMIT_DIR
+# Example SLURM launcher for lightweight, GPU-free tasks. All MCMC launch
+# scripts in this repository require a GPU (cupy) - use gpumcmc.sh for those -
+# but trajectory integration alone does not. Edit SCRIPT below and the SBATCH
+# options above for your own cluster.
+#
+# Submit with: sbatch --chdir=<repo_root> launchers/cpujob.sh
 
-# command to use
-hostname
+SCRIPT="scripts/dephasing_trajectories.py"
+
+cd "$SLURM_SUBMIT_DIR"
 
 conda activate few
-python trajectory_test_1PAT1R.py
+python "$SCRIPT"
+conda deactivate
