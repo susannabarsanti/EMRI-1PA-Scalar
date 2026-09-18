@@ -1,31 +1,22 @@
 # EMRI-1PA-Scalar
 
-MCMC parameter-estimation pipeline and results for EMRI waveforms with scalar fields, incorporating first post-adiabatic (1PA) gravitational corrections and compared against 0PA / post-Newtonian / GR baselines.
+Parameter-estimation pipeline and results for EMRI waveforms with scalar fields, incorporating first post-adiabatic (1PA) gravitational corrections and compared against 0PA / post-Newtonian / GR baselines.
 
-If you use this repository, please cite:
+If you use this repository, please cite [arXiv:2607.09310](https://arxiv.org/abs/2607.09310). 
 
-> S. Barsanti, O. Burke, A. Maselli, T. Sotiriou, A. Spiers, N. Warburton, "The significance of first post-adiabatic contributions for scalar charge measurements with intermediate and extreme mass ratio inspirals" [arXiv:2607.09310](https://arxiv.org/abs/2607.09310)
+The 1PA gravitational self-force flux data used in the trajectory modules (`scripts/shared_modules/data_few/QuasiCircularData_new.dat`) is taken from  [arXiv:2107.01298](https://arxiv.org/abs/2107.01298)
+,  [arXiv:2112.12265](https://arxiv.org/abs/2112.12265) . 
 
-The 1PA gravitational self-force flux data used in the trajectory modules (`scripts/shared_modules/data_few/QuasiCircularData_new.dat`) is taken from:
+The analytic PN formulas used for the 1PA gravitational terms above `p=30` (where no numerical 1PA data is available) are taken from [arXiv:2510.16112](https://arxiv.org/abs/2510.16112),  [arXiv:2510.16114](https://arxiv.org/abs/2510.16114). 
 
-> N. Warburton, A. Pound, B. Wardell, J. Miller, L. Durkan, "Gravitational-wave energy flux for compact binaries through second order in the mass ratio," Phys. Rev. Lett. 127, 151102 (2021), [arXiv:2107.01298](https://arxiv.org/abs/2107.01298)
-
-> B. Wardell, A. Pound, N. Warburton, J. Miller, L. Durkan, A. Le Tiec, "Gravitational waveforms for compact binaries from second-order self-force theory," Phys. Rev. Lett. 130, 241402 (2023), [arXiv:2112.12265](https://arxiv.org/abs/2112.12265)
-
-The analytic PN formulas used above `p=30` (where no numerical 1PA data is available) are taken from:
-
-> L. Honet, J. Mathews, G. Compère, A. Pound, B. Wardell, G. A. Piovano, M. van de Meent, and N. Warburton, (2025), [arXiv:2510.16112](https://arxiv.org/abs/2510.16112)
-
-> L. Honet, A. Pound, and G. Compère, Phys. Rev. D 113, 064035 (2026), [arXiv:2510.16114](https://arxiv.org/abs/2510.16114) 
-
-Parts of the analysis notebook are adapted from code originally written by Ollie Burke, see his [EMRI_PE](https://github.com/OllieBurke/EMRI_PE) repository.
+Parts of the analysis notebook are adapted from code originally written by Ollie Burke, see [EMRI_PE](https://github.com/OllieBurke/EMRI_PE).
 
 ## Repository structure
 
-- `data/` — trimmed (post burn-in/thinning) MCMC posterior samples (`.h5`, eryn `HDFBackend` format) for every scenario in the paper (Cases 1-4, Appendix C1-3).
+- `data/` — trimmed (post burn-in) MCMC posterior samples (`.h5`, eryn `HDFBackend` format) for every scenario in the paper (Cases 1-4, Appendix C1-3). Raw chains are not included here due to file size, email me if interested. 
 - `figures/` — corner plots and waveform-comparison figures shown in the paper.
-- `checks_Burke/` — corner plots and waveform comparisons from a side-by-side check against the flux tables used in Burke et al. (Schwarzschild / Schwarzschild-bicubic / Kerr flux models).
-- `notebooks/` — `notebook_1PAScalarVS0PAScalar.ipynb`, reproduces the paper's corner plots and bias computations from the files in `data/`. Cells that require the full (untrimmed) raw chains (only used for autocorrelation-time diagnostics, not for any figure) are commented out, since raw chains are not included here due to file size.
+- `checks_Burke/` — corner plots and waveform comparisons for a check against Burke et al. (Schwarzschild / Schwarzschild-bicubic / Kerr flux models).
+- `notebooks/` — `notebook_1PAScalarVS0PAScalar.ipynb`, reproduces the paper's corner plots and bias computations from the files in `data/`. Cells that require the full (untrimmed) raw chains (only used for autocorrelation-time diagnostics, not for any figure) are commented out.
 - `scripts/` — MCMC launch scripts for every scenario, plus `shared_modules/` (custom FEW-compatible trajectory ODE classes, including the flux-calibration data in `shared_modules/data_few/`). Scripts are self-contained: paths are resolved relative to the repository root, and running one will create local `psd_cache/` and `raw_runs/` folders (both git-ignored).
 
 ## Requirements
