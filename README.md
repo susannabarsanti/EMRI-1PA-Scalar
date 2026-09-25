@@ -15,7 +15,7 @@ Parts of the analysis notebook are adapted from code originally written by Ollie
 
 - `data/` — trimmed (post burn-in) MCMC posterior samples (`.h5`, eryn `HDFBackend` format) for every scenario in the paper (Cases 1-4, Appendix C1-3). Raw chains are not included here due to file size, email me if interested. 
 - `figures/` — corner plots and waveform-comparison figures shown in the paper.
-- `checks_Burke/` — corner plots and waveform comparisons for a check against Burke et al. [arXiv:2310.08927](https://arxiv.org/abs/2310.08927) (Schwarzschild / Schwarzschild-bicubic / Kerr flux models).
+- `checks_pureGR/` — corner plots and waveform comparisons for a check against Burke et al. [arXiv:2310.08927](https://arxiv.org/abs/2310.08927) (Schwarzschild / Schwarzschild-bicubic / Kerr flux models).
 - `notebooks/` — `notebook_1PAScalarVS0PAScalar.ipynb`, reproduces the paper's corner plots and bias computations from the files in `data/`. Cells that require the full (untrimmed) raw chains (only used for autocorrelation-time diagnostics, not for any figure) are commented out.
 - `scripts/` — MCMC launch scripts for every scenario, plus `shared_modules/` (custom FEW-compatible trajectory ODE classes, including the flux-calibration data in `shared_modules/data_few/`). Scripts are self-contained: paths are resolved relative to the repository root, and running one will create local `psd_cache/` and `raw_runs/` folders (both git-ignored).
 
