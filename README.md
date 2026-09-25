@@ -7,7 +7,7 @@ If you use this repository, please cite [arXiv:2607.09310](https://arxiv.org/abs
 The 1PA gravitational self-force flux data used in the trajectory modules (`scripts/shared_modules/data_few/QuasiCircularData_new.dat`) is taken from  [arXiv:2107.01298](https://arxiv.org/abs/2107.01298)
 ,  [arXiv:2112.12265](https://arxiv.org/abs/2112.12265) . 
 
-The analytic PN formulas used for the 1PA gravitational terms above `p=30` (where no numerical 1PA data is available) are taken from [arXiv:2510.16112](https://arxiv.org/abs/2510.16112),  [arXiv:2510.16114](https://arxiv.org/abs/2510.16114). 
+The analytic PN formulas used for the 1PA gravitational terms above `r=30` (where no numerical 1PA data is available) are taken from [arXiv:2510.16112](https://arxiv.org/abs/2510.16112),  [arXiv:2510.16114](https://arxiv.org/abs/2510.16114). 
 
 Parts of the analysis notebook are adapted from code originally written by Ollie Burke, see [EMRI_PE](https://github.com/OllieBurke/EMRI_PE).
 
