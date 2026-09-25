@@ -19,21 +19,28 @@ Parts of the analysis notebook are adapted from code originally written by Ollie
 - `notebooks/` — `notebook_1PAScalarVS0PAScalar.ipynb`, reproduces the paper's corner plots and bias computations from the files in `data/`. Cells that require the full (untrimmed) raw chains (only used for autocorrelation-time diagnostics, not for any figure) are commented out.
 - `scripts/` — MCMC launch scripts for every scenario, plus `shared_modules/` (custom FEW-compatible trajectory ODE classes, including the flux-calibration data in `shared_modules/data_few/`). Scripts are self-contained: paths are resolved relative to the repository root, and running one will create local `psd_cache/` and `raw_runs/` folders (both git-ignored).
 
-## Requirements
+## Setup
 
-Tested with the following environment (Python 3.12):
+1. Create and activate a fresh conda environment (Python 3.12):
 
-- [`few`](https://github.com/BlackHolePerturbationToolkit/FastEMRIWaveforms) == 2.0.0
-- `eryn` == 1.1.14
-- `cupy-cuda12x` == 13.4.1 (GPU runs; a CUDA toolkit, e.g. 12.6, must be available)
-- `fastlisaresponse` == 1.0.11
-- `lisaanalysistools` == 1.0.14
-- `lisaconstants` == 1.3.6
-- `numpy` == 2.2.6
-- `scipy` == 1.15.3
-- `h5py` == 3.14.0
-- `corner` == 2.2.3
-- `matplotlib` == 3.10.3
+   ```bash
+   conda create -n few_env python=3.12
+   conda activate few_env
+   ```
+
+2. Install [FEW](https://github.com/BlackHolePerturbationToolkit/FastEMRIWaveforms) with GPU support (version 2.0.x; requires a CUDA toolkit, e.g. 12.6):
+
+   ```bash
+   pip install fastemriwaveforms-cuda12x==2.0.0
+   ```
+
+3. Install the remaining dependencies:
+
+   ```bash
+   pip install eryn==1.1.14 lisaanalysistools==1.0.14 lisaconstants==1.3.6 \
+               fastlisaresponse==1.0.11 cupy-cuda12x==13.4.1 numpy==2.2.6 \
+               scipy==1.15.3 h5py==3.14.0 corner==2.2.3 matplotlib==3.10.3
+   ```
 
 ## Running a scenario
 
